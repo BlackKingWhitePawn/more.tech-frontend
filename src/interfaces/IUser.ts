@@ -1,17 +1,18 @@
-import { type } from "os";
-
-enum UserRole {
-    default,
-    admin,
-    moderator,
-    leader
-}
+// enum UserRole {
+//     default,
+//     admin,
+//     moderator,
+//     leader
+// }
 
 interface IUser {
-    role: UserRole,
+    // role: UserRole,
     name: String,
-    login: String
+    login: String,
+    isAdmin: boolean,
+    isEditor: boolean,
+    isLeader: boolean
 }
 
 export default IUser
-export { UserRole }
+// export { UserRole }

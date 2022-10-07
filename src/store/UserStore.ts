@@ -1,4 +1,4 @@
-import IUser, { UserRole } from "interfaces/IUser"
+import IUser from "interfaces/IUser"
 import { Nullable } from "interfaces/Types"
 import { makeAutoObservable } from "mobx"
 
