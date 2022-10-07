@@ -4,6 +4,7 @@ interface IAlertStore {
     alerts: IAlert[]
     closeAlert: (id: String) => void
     closeAllAlerts: () => void
+    setAlert: (alert: IAlert) => void
 }
 
 class AlertStore implements IAlertStore {
@@ -19,6 +20,10 @@ class AlertStore implements IAlertStore {
 
     public closeAllAlerts() {
         this.alerts = []
+    }
+
+    public setAlert(alert: IAlert) {
+        this.alerts.push(alert)
     }
 }
 
