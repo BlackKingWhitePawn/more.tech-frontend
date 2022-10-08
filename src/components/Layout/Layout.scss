@@ -8,6 +8,12 @@
     display: flex;
     flex-direction: column;
     background: $grayBackground;
+
+    &_animatedBackground {
+        background: linear-gradient(-45deg, $grayBackground, #9876d6, #af41db, #9876d6, $grayBackground);
+	    background-size: 400% 400%;
+	    animation: gradient 7s ease infinite;
+    }
     
     &__content {
         &_center {
@@ -43,5 +49,17 @@
                 }
             }
         }
+    }
+
+    @keyframes gradient {
+	    0% {
+	    	background-position: 0% 50%;
+	    }
+	    50% {
+	    	background-position: 100% 50%;
+	    }
+	    100% {
+	    	background-position: 0% 50%;
+	    }
     }
 }
