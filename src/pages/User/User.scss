@@ -1,0 +1,54 @@
+@import '../../styles/colors';
+
+.user {
+    &__profile-sidebar {
+        display: flex;
+        flex-direction: column;
+        & > div:not(:first-child) {
+            margin-top: 16px;
+        }
+    }
+
+    &__work-status {
+        margin: 0;
+    }
+
+    &__task-number {
+        color: $blue;
+        font-weight: 600;
+    }
+
+    &__profile-block {
+        position: relative;
+        padding-right: 36px
+    }
+
+    &__settings-button {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+
+    &__wallet-title {
+        margin: 0;
+    }
+    
+    &__wallet-bottom {
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__money-count {
+        margin: 0;
+    }
+
+    &__main > div:not(:first-child) {
+        margin-top: 16px;
+    }
+}
+
+.row {
+    display: flex;
+}
