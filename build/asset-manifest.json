@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.65b78c79.css",
-    "main.js": "/static/js/main.c019f604.js",
-    "static/media/VTBGroupUI-Light.woff2": "/static/media/VTBGroupUI-Light.845b09c6ac8e319b148a.woff2",
-    "static/media/VTBGroupUI-Bold.woff2": "/static/media/VTBGroupUI-Bold.732c54fe677932d3dcc6.woff2",
-    "static/media/VTBGroupUI-Regular.woff2": "/static/media/VTBGroupUI-Regular.95988516a59b31528e1e.woff2",
-    "static/media/VTBGroupUI-Medium.woff2": "/static/media/VTBGroupUI-Medium.c7e06ea5d86c50e6fcc7.woff2",
-    "static/media/logo.svg": "/static/media/logo.621966754abc3b484edb8830d7964e80.svg",
-    "static/media/accountCircle24.svg": "/static/media/accountCircle24.0614c26fb0f7977e237616dbeadda203.svg",
-    "static/media/send24.svg": "/static/media/send24.3d9648f96589fcb1f249bc556c6a0642.svg",
-    "static/media/pencil24.svg": "/static/media/pencil24.c2ac60e3d705b83ae3f9325b9195a527.svg",
-    "index.html": "/index.html",
-    "static/media/login24.svg": "/static/media/login24.8c8bc9937c5d333e79102f242b1f23f2.svg",
-    "main.65b78c79.css.map": "/static/css/main.65b78c79.css.map",
-    "main.c019f604.js.map": "/static/js/main.c019f604.js.map"
+    "main.css": "./static/css/main.5da782ae.css",
+    "main.js": "./static/js/main.a58aec94.js",
+    "static/media/VTBGroupUI-Light.woff2": "./static/media/VTBGroupUI-Light.845b09c6ac8e319b148a.woff2",
+    "static/media/VTBGroupUI-Bold.woff2": "./static/media/VTBGroupUI-Bold.732c54fe677932d3dcc6.woff2",
+    "static/media/VTBGroupUI-Regular.woff2": "./static/media/VTBGroupUI-Regular.95988516a59b31528e1e.woff2",
+    "static/media/VTBGroupUI-Medium.woff2": "./static/media/VTBGroupUI-Medium.c7e06ea5d86c50e6fcc7.woff2",
+    "static/media/logo.svg": "./static/media/logo.621966754abc3b484edb8830d7964e80.svg",
+    "static/media/accountCircle24.svg": "./static/media/accountCircle24.0614c26fb0f7977e237616dbeadda203.svg",
+    "static/media/send24.svg": "./static/media/send24.3d9648f96589fcb1f249bc556c6a0642.svg",
+    "static/media/pencil24.svg": "./static/media/pencil24.c2ac60e3d705b83ae3f9325b9195a527.svg",
+    "index.html": "./index.html",
+    "static/media/login24.svg": "./static/media/login24.8c8bc9937c5d333e79102f242b1f23f2.svg",
+    "main.5da782ae.css.map": "./static/css/main.5da782ae.css.map",
+    "main.a58aec94.js.map": "./static/js/main.a58aec94.js.map"
   },
   "entrypoints": [
-    "static/css/main.65b78c79.css",
-    "static/js/main.c019f604.js"
+    "static/css/main.5da782ae.css",
+    "static/js/main.a58aec94.js"
   ]
 }
