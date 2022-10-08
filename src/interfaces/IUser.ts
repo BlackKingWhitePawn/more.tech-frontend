@@ -7,8 +7,8 @@
 
 interface IUser {
     // role: UserRole,
-    name: String,
-    login: String,
+    name: string,
+    login: string,
     isAdmin: boolean,
     isEditor: boolean,
     isLeader: boolean

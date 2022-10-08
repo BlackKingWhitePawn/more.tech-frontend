@@ -2,7 +2,7 @@ import IAlert from "interfaces/IAlert"
 
 interface IAlertStore {
     alerts: IAlert[]
-    closeAlert: (id: String) => void
+    closeAlert: (id: string) => void
     closeAllAlerts: () => void
     setAlert: (alert: IAlert) => void
 }
@@ -14,7 +14,7 @@ class AlertStore implements IAlertStore {
         this.alerts = []
     }
 
-    public closeAlert(id: String) {
+    public closeAlert(id: string) {
         this.alerts = this.alerts.filter(a => a?.id !== id)
     }
 
