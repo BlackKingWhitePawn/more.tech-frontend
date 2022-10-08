@@ -1,6 +1,7 @@
 import Header from 'components/Header/Header'
 import React, { FC, useEffect } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
+import AlertStore from 'store/AlertStore'
 import UserStore from 'store/UserStore'
 import './Layout.scss'
 
@@ -11,7 +12,7 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children, alignment = 'default' }) => {
     return (
-        <>
+        <div className='page'>
             <div className='layout'>
                 <Header items={[
                     { path: '/leaderboard', title: 'рейтинг пользователей' },
@@ -21,7 +22,15 @@ const Layout: FC<LayoutProps> = ({ children, alignment = 'default' }) => {
                     {children}
                 </div>
             </div>
-        </>
+            {/* <div className='alerts'>
+                {AlertStore.alerts.map(alert => (
+                    <div className='alert'>
+                        <h3>{alert.title}</h3>
+                        <p>{alert.description}</p>
+                    </div>
+                ))}
+            </div> */}
+        </div>
     )
 }
 

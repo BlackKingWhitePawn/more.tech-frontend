@@ -45,3 +45,12 @@
         }
     }
 }
+
+.page {
+    position: relative;
+}
+
+.alerts {
+    position: absolute;
+    color: $red;
+}
