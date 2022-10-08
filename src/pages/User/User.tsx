@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Block, Layout } from 'components'
 import Urls from 'constants/Urls'
 import IUser from 'interfaces/IUser'
 import { observer } from 'mobx-react'
@@ -21,7 +22,42 @@ const User: FC = observer(() => {
 
 
     return (
-        <div>{user?.name}</div>
+        <Layout>
+            <aside>
+                <Block >
+                    profile
+                </Block>
+                <Block >
+                    cards
+                </Block>
+                <Block >
+                    friends
+                </Block>
+            </aside>
+            <main>
+                <Block >
+                    info
+                </Block>
+                <div className="row">
+                    <Block >
+                        achivements
+                    </Block>
+                    <Block >
+                        inventory
+                    </Block>
+                </div>
+                <div className="row">
+                    <Block >
+                        events
+                    </Block>
+                </div>
+                <div className="row">
+                    <Block >
+                        events
+                    </Block>
+                </div>
+            </main>
+        </Layout>
     )
 })
 
