@@ -11,7 +11,7 @@ interface ButtonProps {
 
 const Button: FC<ButtonProps> = ({ onClick, title, type = 'primary', large, disabled }) => {
     return (
-        <button className={`button button_${type} ${large ? 'button_large' : ''} ${disabled ? 'button_disabled' : ''}`}>
+        <button className={`button button_${type} ${large ? 'button_large' : ''} ${disabled ? 'button_disabled' : ''}`} onClick={onClick ?? (() => { })}>
             <span className="button__label">
                 {title}
             </span>

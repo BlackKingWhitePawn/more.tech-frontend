@@ -3,11 +3,12 @@ import './Block.scss'
 
 interface BlockProps {
     children: ReactNode
+    className?: string
 }
 
-const Block: FC<BlockProps> = ({ children }) => {
+const Block: FC<BlockProps> = ({ children, className }) => {
     return (
-        <div className='block'>
+        <div className={`block ${className}`}>
             {children}
         </div>
     )

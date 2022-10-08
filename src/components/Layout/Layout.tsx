@@ -5,11 +5,12 @@ import './Layout.scss'
 interface LayoutProps {
     children: React.ReactNode
     alignment?: 'center' | 'default'
+    animatedBackground?: boolean
 }
 
-const Layout: FC<LayoutProps> = ({ children, alignment = 'default' }) => {
+const Layout: FC<LayoutProps> = ({ children, alignment = 'default', animatedBackground }) => {
     return (
-        <div className='layout'>
+        <div className={`layout ${animatedBackground ? 'layout_animatedBackground' : ''}`}>
             <Header items={[
                 { path: '/leaderboard', title: 'рейтинг пользователей' },
                 { path: '/inventory', title: 'инвентарь' },

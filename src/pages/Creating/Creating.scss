@@ -1,0 +1,37 @@
+@import '../../styles/colors';
+
+.creating {
+    background: $white;
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 64px;
+    }
+
+    &__character > svg {
+        position: absolute;
+    }
+
+    &__character {
+        position: relative;
+        height: 274px;
+        width: 163px;
+        &-hair {
+            z-index: 20;
+        }
+        &-head {
+            top: 26px;
+            z-index: 10;
+        }
+        &-body {
+            top: 96px;
+        }
+        &-legs {
+            top: 171px;
+        }
+        &-feet {
+            top: 252px;
+        }
+    }
+}
