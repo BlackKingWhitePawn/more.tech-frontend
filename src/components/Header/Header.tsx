@@ -17,7 +17,9 @@ const Header: FC<HeaderProps> = ({ items }) => {
     return (
         <header className="header">
             <nav className="header__left">
-                <Logo />
+                <Link to='/'>
+                    <Logo />
+                </Link>
                 <div className="header__items-container">
                     {items.map(item => <Link className='header__item' key={item.title} to={item.path}>
                         {item.title}
