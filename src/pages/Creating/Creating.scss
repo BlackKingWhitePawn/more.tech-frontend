@@ -1,0 +1,76 @@
+@import '../../styles/colors';
+@import '../../styles/animations';
+
+.creating {
+    background: $white;
+    width: 300px;
+    height: max-content;
+    transition: $linkHover;
+
+    &__controls {
+        display: flex;
+        gap: 16px;
+        margin: 12px 0 0;
+    }
+
+    &__character > svg {
+        position: absolute;
+        cursor: pointer;
+    }
+
+    // &__character > svg:hover {
+    //     animation: svgAnimation 1.5s ease-in-out infinite;
+    // }
+
+    &__character {
+        margin: auto;
+        position: relative;
+        height: 274px;
+        width: 163px;
+        margin-bottom: 20px;
+
+        &-hair {
+            z-index: 20;
+        }
+        &-head {
+            z-index: 30;
+            top: 26px;
+        }
+        &-body {
+            z-index: 10;
+            top: 96px;
+        }
+        &-bottom {
+            top: 171px;
+        }
+        &-shoes {
+            top: 252px;
+        }
+    }
+
+    &__items-container {
+        display: flex;
+        padding: 12px;
+        border: 1px solid $grayBorder;
+        border-radius: 16px;
+        margin-top: 36px;
+        & > svg {
+            margin-right: 12px;
+            cursor: pointer;
+        }
+    }
+}
+
+// @keyframes svgAnimation {
+//     0% {
+//         fill: $blue;
+//     }
+
+//     50% {
+//         fill: $red;
+//     }
+
+//     100% {
+//         fill: $blue;
+//     }
+// }

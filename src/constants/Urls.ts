@@ -4,7 +4,8 @@ const Urls = {
     login: `${API_URL}auth/login`,
     registration: `${API_URL}auth/registration`,
     user: (id: Number) => `${API_URL}user/${id}`,
-    characterBaseClothes: `${API_URL}user/character/base_clothes`
+    characterBaseClothes: `${API_URL}user/character/base_clothes`,
+    characterSave: `${API_URL}user/character/change-equipment`
 }
 
 export default Urls
