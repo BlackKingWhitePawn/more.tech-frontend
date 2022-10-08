@@ -15,15 +15,15 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ items }) => {
     return (
-        <nav className="header">
-            <div className="header__left">
+        <header className="header">
+            <nav className="header__left">
                 <Logo />
                 <div className="header__items-container">
                     {items.map(item => <Link className='header__item' key={item.title} to={item.path}>
                         {item.title}
                     </Link>)}
                 </div>
-            </div>
+            </nav>
             <div className="header__controls-container">
                 <ButtonIcon path='/profile'>
                     <AccountCircleIconSVG />
@@ -32,7 +32,7 @@ const Header: FC<HeaderProps> = ({ items }) => {
                     <LoginIconSVG />
                 </ButtonIcon>
             </div>
-        </nav>
+        </header>
     )
 }
 

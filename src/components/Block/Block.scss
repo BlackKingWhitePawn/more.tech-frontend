@@ -1,0 +1,9 @@
+@import "../../styles/effects";
+
+.block {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 48px;
+    box-shadow: $blockShadow;
+    border-radius: 16px;
+}

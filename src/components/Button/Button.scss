@@ -1,0 +1,51 @@
+@import '../../styles/colors';
+@import '../../styles/animations';
+
+.button {
+    height: 28px;
+    color: $blueLight;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 16px;
+    cursor: pointer;
+
+    &_primary {
+        background: $blueLight;
+        color: $white;
+    }
+
+    &_primary:hover {
+        background: $blueHover;
+    }
+    
+    &_secondary:hover {
+        background: $blueHoverLight;
+    }
+
+    &:hover {
+        transition: $linkHover;
+    }
+
+    &_secondary {
+        background: transparent;
+        color: $blueLight;
+        border: 1px solid $blueLight;
+    }
+
+    &_large {
+        width: 100%;
+    }
+
+    &_disabled {
+        cursor: not-allowed;
+    }
+
+    &_disabled.button_secondary {
+        border-color: $graySecondary;
+        color: $graySecondary;
+    }
+
+    &_disabled.button_primary {
+        background: $grayDisabled;
+    }
+}

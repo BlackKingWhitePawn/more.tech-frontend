@@ -29,8 +29,10 @@ html {
     font-family: 'VTBGroupUI', Arial, Helvetica, sans-serif;
 }
 
-body {
+html, body, #root {
     margin: 0;
+    // height: 100%;
+    // width: 100%;
 }
 
 a, a:visited, a:active {
@@ -43,4 +45,9 @@ a:hover {
     color: $red;
     cursor: pointer;
     transition: $linkHover;
+}
+
+h2 {
+    font-weight: 600;
+    color: $graySecondary;
 }
