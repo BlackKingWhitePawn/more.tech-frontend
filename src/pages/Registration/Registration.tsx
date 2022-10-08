@@ -27,11 +27,9 @@ function Registration() {
                 .then(res => {
                     axios
                         .post(Urls.login, {
-                            body: {
-                                username: login,
-                                password: password,
-                                grant_type: 'password' // wtf... =)
-                            }
+                            username: login,
+                            password: password,
+                            grant_type: 'password' // wtf... =)
                         }, {
                             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                         })
