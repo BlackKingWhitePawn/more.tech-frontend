@@ -39,6 +39,10 @@ const router = createBrowserRouter([
         path: '/user/:id',
         element: <User />
     },
+    {
+        path: '*',
+        element: <Root />
+    }
 ])
 
 root.render(
