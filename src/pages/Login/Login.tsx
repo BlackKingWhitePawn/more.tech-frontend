@@ -15,8 +15,8 @@ const Login = () => {
                         С возвращением, username!
                     </h2>
                     <form className="login__form">
-                        <Input placeholder='Логин или адрес почты' value={login} setValue={(newValue) => setLogin(newValue)} />
-                        <Input placeholder='Пароль' value={password} setValue={(newValue) => setPassword(newValue)} password />
+                        <Input placeholder='Логин или адрес почты' value={login} setValue={(newValue: string) => setLogin(newValue)} />
+                        <Input placeholder='Пароль' value={password} setValue={(newValue: string) => setPassword(newValue)} password />
                     </form>
                     <div className="login__buttons">
                         <Button title='Войти' large onClick={() => { }} />
