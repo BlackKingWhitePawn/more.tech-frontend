@@ -1,6 +1,6 @@
 .login {
     &__title {
-        margin-bottom: 96px;
+        margin-bottom: 32px;
     }
 
     &__buttons > button:not(:first-child) {
@@ -22,5 +22,11 @@
         grid-template-columns: 1fr 1fr;
         gap: 12px;
         margin-top: 8px;
+    }
+
+    &__loader {
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
     }
 }

@@ -1,6 +1,7 @@
 import Header from 'components/Header/Header'
 import React, { FC, useEffect } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
+import AlertStore from 'store/AlertStore'
 import UserStore from 'store/UserStore'
 import './Layout.scss'
 

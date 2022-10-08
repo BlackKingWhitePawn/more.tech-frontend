@@ -1,9 +1,10 @@
 import axios from 'axios'
-import { Block, Button, Input, Layout } from 'components'
+import { Block, Button, Input, Layout, Loader } from 'components'
 import Urls from 'constants/Urls'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import AlertStore from 'store/AlertStore'
+import AppStore from 'store/AppStore'
 import './Registration.scss'
 
 function Registration() {
@@ -17,19 +18,36 @@ function Registration() {
     useEffect(() => {
         if (sendingData) {
             axios
-                .post(Urls.registration)
-                .then(res => {
-                    if (res.status === 200) navigate('/user')
-                    else {
-                        // TODO: заполнить поля и сообщения об ошибках
-                    }
+                .post(Urls.registration, {
+                    login: login,
+                    email: email,
+                    password: password,
+                    name: ''
                 })
-                .catch(res => AlertStore.setAlert({
-                    id: '1',
-                    title: 'Ошибка регистрации',
-                    description: 'Пожалуйста, перезагрузите страницу'
-                }))
-            // setSendingData(false)
+                .then(res => {
+                    axios
+                        .post(Urls.login, {
+                            body: {
+                                username: login,
+                                password: password,
+                                grant_type: 'password' // wtf... =)
+                            }
+                        }, {
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                        })
+                        .then(res => {
+                            AppStore.setToken(res.data.access_token)
+                            navigate(`/user/${res.data.user_id}`)
+                        })
+                })
+                .catch(res => {
+                    AlertStore.setAlert({
+                        title: 'Ошибка регистрации',
+                        description: 'Пожалуйста, перезагрузите страницу'
+
+                    })
+                    setSendingData(false)
+                })
         }
 
     }, [sendingData])
@@ -42,6 +60,9 @@ function Registration() {
                     <h2 className='registration__title'>
                         Добро пожаловать в цифровой офис ВТБ
                     </h2>
+                    <div className="login__loader">
+                        {sendingData && <Loader />}
+                    </div>
                     <form className="registration__form">
                         <Input placeholder='Адрес корпоративной почты' value={email} setValue={(newValue: string) => setEmail(newValue)} />
                         <Input placeholder='Логин' value={login} setValue={(newValue: string) => setLogin(newValue)} />

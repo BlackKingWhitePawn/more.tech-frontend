@@ -18,7 +18,6 @@ const User: FC = observer(() => {
             .get(Urls.user(1))
             .then(res => setUser(res.data))
             .catch(err => AlertStore.setAlert({
-                id: '21',
                 title: 'Ошибка загрузки пользователя',
                 description: 'Описание'
             }))
