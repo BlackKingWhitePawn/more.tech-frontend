@@ -1,0 +1,19 @@
+.login {
+    &__title {
+        margin-bottom: 96px;
+    }
+
+    &__buttons > button:not(:first-child) {
+        margin-top: 12px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        & > input:not(:first-child) {
+            margin-top: 12px;
+        }
+    }
+}

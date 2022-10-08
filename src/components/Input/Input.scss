@@ -1,0 +1,22 @@
+@import '../../styles/colors';
+@import '../../styles/animations';
+
+.input {
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid $grayBorder;
+    color: $graySecondary;
+    padding: 4px 12px;
+    transition: $linkHover;
+
+    &:focus, &:active, &:focus-visible {
+        border-color: $blueLight;
+        transition: $linkHover;
+    }
+
+    &:hover {
+        cursor: text;
+        background: $blueHoverLight;
+        transition: $linkHover;
+    }
+}
