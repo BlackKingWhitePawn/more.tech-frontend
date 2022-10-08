@@ -9,8 +9,6 @@ const User: FC = observer(() => {
     const [user, setUser] = useState<IUser>()
 
     useEffect(() => {
-        console.log(Urls.user(1));
-
         axios
             .get(Urls.user(1))
             .then(res => setUser(res.data))
