@@ -1,0 +1,46 @@
+@import './styles/colors';
+@import './styles/animations';
+
+@font-face {
+    font-family: "VTBGroupUI";
+    src: url(media/fonts/VTBGroupUI-Light.woff2) format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "VTBGroupUI";
+    src: url(media/fonts/VTBGroupUI-Regular.woff2) format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "VTBGroupUI";
+    src: url(media/fonts/VTBGroupUI-Medium.woff2) format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "VTBGroupUI";
+    src: url(media/fonts/VTBGroupUI-Bold.woff2) format("woff2");
+    font-weight: 700;
+}
+
+html {
+    font-family: 'VTBGroupUI', Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+a, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+    transition: $linkHover;
+}
+
+a:hover {
+    color: $red;
+    cursor: pointer;
+    transition: $linkHover;
+}
