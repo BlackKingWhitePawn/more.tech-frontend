@@ -1,0 +1,15 @@
+.registration {
+    &__title {
+        margin-bottom: 64px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        & > input:not(:first-child) {
+            margin-top: 12px;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import { Layout } from 'components';
 import Login from 'pages/Login/Login';
+import Registration from 'pages/Registration/Registration';
 import Root from 'pages/Root/Root';
 import User from 'pages/User/User';
 import React from 'react';
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     {
         path: '/login',
         element: <Login />
+    },
+    {
+        path: '/registration',
+        element: <Registration />
     },
     {
         path: '/user/:id',
