@@ -3,7 +3,7 @@ import { AccountCircleIconSVG, LoginIconSVG } from 'media'
 import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 import UserStore from 'store/UserStore'
-import ButtonIcon from './ButtonIcon/ButtonIcon'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
 import './Header.scss'
 
 interface HeaderProps {
@@ -28,7 +28,7 @@ const Header: FC<HeaderProps> = ({ items }) => {
                 <ButtonIcon path='/profile'>
                     <AccountCircleIconSVG />
                 </ButtonIcon>
-                <ButtonIcon onClick={UserStore.clearUserData}>
+                <ButtonIcon onClick={() => UserStore.clearUserData()}>
                     <LoginIconSVG />
                 </ButtonIcon>
             </div>

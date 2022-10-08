@@ -1,5 +1,6 @@
 @import '../../styles/effects';
 @import '../../styles/colors';
+@import '../../styles/breakpoints';
 
 .header {
     background: $white;
@@ -7,7 +8,6 @@
     height: 60px;
     display: flex;
     justify-content: space-between;
-    padding: 16px 48px;
     box-sizing: border-box;
     border-bottom: $headerStrokeBottom;
     color: $graySecondary;
@@ -31,6 +31,24 @@
         
         & > div:not(:first-child) {
             margin-left: 16px;
+        }
+    }
+
+    @include large-screen {
+        & {
+            padding: 16px 256px;
+        }
+    }
+
+    @include medium-screen {
+        & {
+            padding: 16px 128px;
+        }
+    }
+
+    @include small-screen {
+        & {
+            padding: 16px;
         }
     }
 }
