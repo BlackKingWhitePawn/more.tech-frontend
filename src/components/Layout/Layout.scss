@@ -9,12 +9,14 @@
     background: $grayBackground;
     
     &__content {
-        // padding: 48px 48px 10px;
-
         &_center {
             display: flex;
             justify-content: space-around;
             margin: auto;
+        }
+
+        &_default {
+            padding: 48px 48px 10px;
         }
     }
 }
