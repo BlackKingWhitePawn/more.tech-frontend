@@ -3,7 +3,7 @@ import './Button.scss'
 
 interface ButtonProps {
     title: string,
-    onClick: () => void,
+    onClick?: () => void,
     type?: 'primary' | 'secondary'
     large?: boolean
     disabled?: boolean

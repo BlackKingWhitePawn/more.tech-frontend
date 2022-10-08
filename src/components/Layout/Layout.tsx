@@ -1,5 +1,7 @@
 import Header from 'components/Header/Header'
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
+import { Navigate, useLocation } from 'react-router-dom'
+import UserStore from 'store/UserStore'
 import './Layout.scss'
 
 interface LayoutProps {

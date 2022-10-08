@@ -1,4 +1,5 @@
 @import '../../styles/colors';
+@import '../../styles/breakpoints';
 
 .layout {
     overflow-x: hidden;
@@ -15,11 +16,38 @@
     }
     
     &__content {
-
         &_center {
             display: flex;
             justify-content: space-around;
             margin: auto;
+        }
+
+        &_default {
+            padding: 36px 128px 0 128px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            
+
+            @include large-screen {
+                & {
+                    padding: 16px 256px;
+                    gap: 64px;
+                }
+            }
+        
+            @include medium-screen {
+                & {
+                    padding: 36px 128px 0 128px;
+                    gap: 36px;
+                }
+            }
+        
+            @include small-screen {
+                & {
+                    padding: 16px;
+                    gap: 16px;
+                }
+            }
         }
     }
 

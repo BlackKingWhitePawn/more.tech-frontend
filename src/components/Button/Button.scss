@@ -2,12 +2,16 @@
 @import '../../styles/animations';
 
 .button {
-    height: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     color: $blueLight;
     border: none;
     border-radius: 4px;
     padding: 4px 16px;
     cursor: pointer;
+    transition: $linkHover;
+    height: 32px;
 
     &_primary {
         background: $blueLight;
@@ -16,13 +20,11 @@
 
     &_primary:hover {
         background: $blueHover;
+        transition: $linkHover;
     }
     
     &_secondary:hover {
         background: $blueHoverLight;
-    }
-
-    &:hover {
         transition: $linkHover;
     }
 

@@ -8,7 +8,7 @@ interface BlockProps {
 
 const Block: FC<BlockProps> = ({ children, className }) => {
     return (
-        <div className={`block ${className}`}>
+        <div className={`block ${className ?? ''}`}>
             {children}
         </div>
     )

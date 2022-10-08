@@ -6,11 +6,12 @@ interface ButtonIconProps {
     onClick?: () => void
     path?: string
     children: ReactNode
+    className?: string
 }
 
-const ButtonIcon: FC<ButtonIconProps> = ({ children, onClick, path }) => {
+const ButtonIcon: FC<ButtonIconProps> = ({ children, onClick, path, className }) => {
     return (
-        <div className='buttonIcon' onClick={onClick ?? (() => { })}>
+        <div className={`buttonIcon ${className ?? ''}`} onClick={onClick ?? (() => { })}>
             {path
                 ?
                 <Link to={path} >
