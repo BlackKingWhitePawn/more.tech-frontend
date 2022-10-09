@@ -6,12 +6,18 @@
 // }
 
 interface IUser {
+    id: string
     // role: UserRole,
-    name: string,
-    login: string,
-    isAdmin: boolean,
-    isEditor: boolean,
-    isLeader: boolean
+    name: string
+    login: string
+    is_admin: boolean
+    is_editor: boolean
+    is_lead: boolean
+    description: string
+    level: number
+    experience: 0
+    equipment: any
+    case_count: 0
 }
 
 export default IUser

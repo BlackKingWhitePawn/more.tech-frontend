@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import AlertStore from 'store/AlertStore'
 import AppStore from 'store/AppStore'
+import UserStore from 'store/UserStore'
 import './Login.scss'
 
 const Login = () => {
@@ -26,6 +27,10 @@ const Login = () => {
                 })
                 .then(res => {
                     AppStore.setToken(res.data.access_token)
+                    AppStore.setId(res.data.user_id)
+                    axios
+                        .get(Urls.user(res.data.user_id))
+                        .then(res => UserStore.setUserData(res.data))
                     navigate(`/user/${res.data.user_id}`)
                 })
                 .catch(err => {

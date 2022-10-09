@@ -49,6 +49,30 @@
                 }
             }
         }
+
+        &_no-cols {
+            display: flex;
+            @include large-screen {
+                & {
+                    padding: 16px 256px;
+                    gap: 64px;
+                }
+            }
+        
+            @include medium-screen {
+                & {
+                    padding: 36px 128px 0 128px;
+                    gap: 36px;
+                }
+            }
+        
+            @include small-screen {
+                & {
+                    padding: 16px;
+                    gap: 16px;
+                }
+            }
+        }
     }
 
     @keyframes gradient {

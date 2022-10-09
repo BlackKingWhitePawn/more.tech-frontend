@@ -1,8 +1,10 @@
 import { Layout } from 'components';
 import Creating from 'pages/Creating/Creating';
 import Login from 'pages/Login/Login';
+import Open from 'pages/Open/Open';
 import Registration from 'pages/Registration/Registration';
 import Root from 'pages/Root/Root';
+import Shop from 'pages/Shop/Shop';
 import User from 'pages/User/User';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -38,21 +40,19 @@ const router = createBrowserRouter([
     {
         path: '/user/:id',
         element: <User />
-    }
+    },
+    {
+        path: '/shop',
+        element: <Shop />
+    },
+    {
+        path: '/open',
+        element: <Open />
+    },
 ])
 
 root.render(
     <React.StrictMode>
-        {/* <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Root />}>
-                    <Route path='login' element={<Login />} />
-                    <Route path='creating' element={<Creating />} />
-                    <Route path='registration' element={<Registration />} />
-                    <Route path='user/:id' element={<User />} />
-                </Route>
-            </Routes>
-        </BrowserRouter> */}
         <RouterProvider router={router} />
     </React.StrictMode>
 );

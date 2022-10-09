@@ -28,7 +28,7 @@ const Header: FC<HeaderProps> = observer(({ items }) => {
                 </div>}
             </nav>
             {AppStore.access_token && <div className="header__controls-container">
-                <ButtonIcon path='/profile'>
+                <ButtonIcon path={`/user/${AppStore.id}`}>
                     <AccountCircleIconSVG />
                 </ButtonIcon>
                 <ButtonIcon onClick={() => {

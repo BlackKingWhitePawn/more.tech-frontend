@@ -1,4 +1,5 @@
 @import '../../styles/colors';
+@import '../../styles/breakpoints';
 
 .user {
     &__profile-sidebar {
@@ -20,7 +21,11 @@
 
     &__profile-block {
         position: relative;
-        padding-right: 36px
+    }
+     
+    &__create-button {
+        margin-top: 48px;
+        margin-bottom: 24px;
     }
 
     &__settings-button {
@@ -29,26 +34,67 @@
         right: 12px;
     }
 
-    &__wallet-title {
-        margin: 0;
+    &__block-title {
+        display: flex;
+        justify-content: space-between;
     }
     
     &__wallet-bottom {
         margin-top: 16px;
-        display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
+    &__wallet-controls {
+        margin-top: 12px;
+    }
+
     &__money-count {
         margin: 0;
+        font-weight: 600;
     }
 
     &__main > div:not(:first-child) {
         margin-top: 16px;
     }
+    
+    &__inv-label {
+        margin-bottom: 16px;
+    }
+
+    &__inv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        // @include large-screen {
+        //     & {
+        //         grid-template-columns: 1fr 1fr 1fr;
+        //     }
+        // }
+
+        gap: 12px;
+    }
+
+    &__nick {
+        padding-right: 12px;
+    }
+
+    &__name {
+        color: $blue;
+    }
+
+    &__friends {
+        margin-top: 12px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__friends > svg {
+        margin-right: 8px;
+    }
 }
 
 .row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }

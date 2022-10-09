@@ -1,9 +1,11 @@
 import axios from 'axios'
-import { Block, Button, Layout } from 'components'
+import { Block, Button, ButtonIcon, Layout } from 'components'
 import Item from 'components/Item/Item'
 import Urls from 'constants/Urls'
+import { ChevronLeft24IconSVG } from 'media'
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useNavigation } from 'react-router-dom'
+import UserStore from 'store/UserStore'
 import './Creating.scss'
 
 enum CharacterParts {
@@ -16,6 +18,7 @@ enum CharacterParts {
 
 function Creating() {
     const navigate = useNavigate()
+    const location = useNavigation()
     const [clothes, setClothes] = useState<{
         [key: string]: any[];
     }>({
@@ -92,6 +95,9 @@ function Creating() {
     return (
         <Layout alignment='center'>
             <Block className='creating'>
+                <ButtonIcon path={`/user/${UserStore.user?.id}`} >
+                    <ChevronLeft24IconSVG />
+                </ButtonIcon>
                 <div className="creating__character">
                     <svg onClick={getSVGOnClick(CharacterParts.hair)} className='creating__character-hair' width="163" height="68" viewBox="0 0 163 68" fill="#7A4A2A" xmlns="http://www.w3.org/2000/svg">
                     </svg>

@@ -47,13 +47,12 @@ a:hover {
     transition: $linkHover;
 }
 
-h2 {
+h1, h2, h3 {
     font-weight: 600;
     color: $graySecondary;
+    margin: 0;
 }
 
 h3 {
     font-size: 16px;
-    font-weight: 600;
-    color: $graySecondary;
 }

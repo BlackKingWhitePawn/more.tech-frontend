@@ -7,7 +7,7 @@ import './Layout.scss'
 
 interface LayoutProps {
     children: React.ReactNode
-    alignment?: 'center' | 'default'
+    alignment?: 'center' | 'default' | 'no-cols'
     animatedBackground?: boolean
 }
 
@@ -15,8 +15,9 @@ const Layout: FC<LayoutProps> = ({ children, alignment = 'default', animatedBack
     return (
         <div className={`layout ${animatedBackground ? 'layout_animatedBackground' : ''}`}>
             <Header items={[
-                { path: '/leaderboard', title: 'рейтинг пользователей' },
+                { path: '/shop', title: 'магазин' },
                 { path: '/inventory', title: 'инвентарь' },
+                { path: '/events', title: 'события' },
             ]} />
             <div className={`layout__content layout__content_${alignment}`}>
                 {children}
