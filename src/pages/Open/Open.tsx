@@ -23,7 +23,7 @@ function Open() {
                 <ButtonIcon path={`/user/${AppStore.id}`} >
                     <ChevronLeft24IconSVG />
                 </ButtonIcon>
-                <img width={100} src='assets/gif1.gif' alt='гифка' />
+                {!svg && <img width={100} src='assets/gif1.gif' alt='гифка' />}
                 <Item svg={svg} />
             </Block>
         </Layout>
