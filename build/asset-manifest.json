@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.24b477a7.css",
-    "main.js": "./static/js/main.1d764b6e.js",
+    "main.js": "./static/js/main.8665b3b3.js",
     "static/media/VTBGroupUI-Light.woff2": "./static/media/VTBGroupUI-Light.845b09c6ac8e319b148a.woff2",
     "static/media/VTBGroupUI-Bold.woff2": "./static/media/VTBGroupUI-Bold.732c54fe677932d3dcc6.woff2",
     "static/media/VTBGroupUI-Regular.woff2": "./static/media/VTBGroupUI-Regular.95988516a59b31528e1e.woff2",
@@ -15,10 +15,10 @@
     "index.html": "./index.html",
     "static/media/login24.svg": "./static/media/login24.8c8bc9937c5d333e79102f242b1f23f2.svg",
     "main.24b477a7.css.map": "./static/css/main.24b477a7.css.map",
-    "main.1d764b6e.js.map": "./static/js/main.1d764b6e.js.map"
+    "main.8665b3b3.js.map": "./static/js/main.8665b3b3.js.map"
   },
   "entrypoints": [
     "static/css/main.24b477a7.css",
-    "static/js/main.1d764b6e.js"
+    "static/js/main.8665b3b3.js"
   ]
 }
