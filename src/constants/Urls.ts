@@ -9,7 +9,7 @@ const Urls = {
     inventory: (id: string) => `${API_URL}blockchain/inventory?user_id=${id}`,
     balance: (id: string) => `${API_URL}blockchain/balance?user_id=${id}`,
     buy: `${API_URL}merch/buy`,
-    claim: `${API_URL}user/claim_case`,
+    claim: (id: string) => `${API_URL}user/claim_case?user_id=${id}`,
 }
 
 export default Urls

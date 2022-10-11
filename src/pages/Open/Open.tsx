@@ -10,9 +10,10 @@ function Open() {
     const [svg, setSvg] = useState('')
 
     useEffect(() => {
-        axios
-            .post(Urls.claim, { user_id: AppStore.id })
+        if (AppStore.id) axios
+            .post(Urls.claim(AppStore.id), {})
             .then(res => {
+                console.log(res);
                 setSvg(res.data.claimed_item.item_svg)
             })
     }, [])
